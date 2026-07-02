@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth w-full overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Mãos de Cura — Reiki para Mulheres que Precisam Parar e Respirar</title>
+  <meta name="description" content="Descubra o Reiki como caminho de autocuidado profundo. Um livro gentil, feito para mulheres que carregam o mundo e esqueceram de cuidar de si.">
+  <meta name="author" content="Feliz com Reiki">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mãos de Cura — Reiki para Mulheres que Precisam Parar e Respirar">
+  <meta property="og:description" content="Um livro gentil de Reiki, feito para quem carrega o mundo e esqueceu de cuidar de si.">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Preload do asset do hero -->
+  <link rel="preload" fetchpriority="high" as="image" href="home.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap">
+  </noscript>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Lato"', 'Helvetica Neue', 'sans-serif'],
+          },
+          colors: {
+            reiki: {
+              primary:  '#8FBC8F',
+              support:  '#F1F8F1',
+              deep:     '#4F7F4F',
+              darker:   '#2E4D2E',
+              soft:     '#FAFFFA',
+              gold:     '#C6A667',
+              text:     '#314131',
+            },
+            cobalt: {
+              DEFAULT: '#1E4A7A',
+              dark:    '#133254',
+            },
+            gold: '#D4AF37',
+            coral: '#E07A5F',
+            premium: {
+              midnight: '#0f1a24',
+              gold:     '#C6A667',
+            },
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(79, 127, 79, 0.12)',
+            glow: '0 22px 70px rgba(143, 188, 143, 0.32)',
+            cta:  '0 14px 32px rgba(30, 74, 122, 0.30)',
+          },
+          letterSpacing: {
+            editorial: '0.22em',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- AOS Animation Library Assíncrona -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
+
+  <!-- Geo-Checkout Script -->
+  <script src="checkout/geo-checkout.js" defer></script>
+
+  <style>
+    /* ── BASE ─────────────────────────────────── */
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #314131;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at top left,  rgba(143,188,143,0.20), transparent 34rem),
+        radial-gradient(circle at 90% 12%, rgba(198,166,103,0.12), transparent 26rem),
+        linear-gradient(180deg, #FAFFFA 0%, #F1F8F1 46%, #FAFFFA 100%);
+    }
+    ::selection { background-color: #F1F8F1; color: #2E4D2E; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── LEAF PATTERN ─────────────────────────── */
+    .leaf-pattern { position: relative; overflow: hidden; }
+    .leaf-pattern::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(143,188,143,0.13) 0 2px, transparent 2px),
+        radial-gradient(circle at 80% 30%, rgba(143,188,143,0.10) 0 3px, transparent 3px),
+        radial-gradient(circle at 40% 85%, rgba(143,188,143,0.08) 0 2px, transparent 2px);
+      background-size: 90px 90px, 130px 130px, 110px 110px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .leaf-pattern > * { position: relative; z-index: 1; }
+
+    /* ── GLASS ────────────────────────────────── */
+    .glass {
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.82);
+    }
+
+    /* ── KICKER ───────────────────────────────── */
+    .section-kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #4F7F4F;
+      font-weight: 900;
+      font-size: 0.78rem;
+    }
+
+    /* ── DIVISOR ──────────────────────────────── */
+    .watercolor-divider {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, #C6A667 30%, #8FBC8F 70%, transparent 100%);
+      opacity: 0.35;
+      max-width: 260px;
+      margin: 3.5rem auto;
+    }
+
+    /* ── BOTÕES ───────────────────────────────── */
+    .btn-primary {
+      background: #1E4A7A;
+      color: #ffffff;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #133254;
+      transform: translateY(-2px);
+    }
+
+    /* ── CARDS ────────────────────────────────── */
+    .module-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(79,127,79,0.14);
+      border-color: rgba(143,188,143,0.55);
+    }
+
+    /* ── PROSE BLOCK ──────────────────────────── */
+    .prose-block {
+      font-size: 1.125rem;
+      line-height: 1.85;
+      color: #314131;
+    }
+    .prose-block p + p { margin-top: 1.4rem; }
+
+    /* ── FAQ ──────────────────────────────────── */
+    .faq-answer { display: none; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ── WHATSAPP ─────────────────────────────── */
+    .whatsapp-float {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px) scale(0.96);
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+    .whatsapp-label {
+      margin-top: 0.45rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+      padding: 0.35rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #2E4D2E;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(79,127,79,0.16);
+      white-space: nowrap;
+    }
+
+    /* ── SCROLLBAR ────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #F1F8F1; }
+    ::-webkit-scrollbar-thumb { background: rgba(143,188,143,0.6); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4F7F4F; }
+
+    :focus-visible { outline: 2px solid #1E4A7A; outline-offset: 3px; border-radius: 4px; }
+    [data-aos] { overflow: visible; }
+
+    /* ── FINISH WEB LINK ──────────────────────── */
+    .finish-web-link {
+      color: inherit;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+    .finish-web-link:hover {
+      background: linear-gradient(90deg, #8a2be2, #00d2ff, #8a2be2);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: textGradientMove 30s linear infinite;
+    }
+    @keyframes textGradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* ── SHADOW CARD ──────────────────────────── */
+    .shadow-card {
+      box-shadow:
+        0 2px 4px rgba(30, 74, 122, 0.05),
+        0 8px 24px rgba(30, 74, 122, 0.08),
+        0 16px 48px rgba(30, 74, 122, 0.04);
+    }
+  </style>
+</head>
+
+<body class="antialiased w-full overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════════════════════
+       BLOCO 01: HERO — A PROMESSA
+       ═══════════════════════════════════════════════════════ -->
+  <header class="leaf-pattern relative min-h-svh max-h-svh overflow-hidden flex items-center md:max-h-none md:min-h-screen md:overflow-visible">
+    <div class="relative mx-auto grid max-w-7xl items-stretch gap-6 px-6 py-2 md:grid-cols-2 md:py-16 md:px-12 lg:px-16 w-full">
+
+      <!-- Coluna Esquerda: flex-col justify-between com altura idêntica à imagem -->
+      <div data-aos="fade-right" class="flex flex-col justify-between h-full min-h-0 md:min-h-[520px] lg:min-h-[580px] py-2 md:py-4">
+
+        <!-- Grupo topo: eyebrow + headline + sub-headline -->
+        <div>
+          <p class="mb-3 md:mb-5 inline-flex rounded-full border border-reiki-primary/40 bg-white/70 px-4 py-1.5 md:py-2 text-xs md:text-sm font-bold uppercase tracking-editorial text-reiki-deep">
+            Pra mulher que tá cuidando de todo mundo, menos de si.
+          </p>
+
+          <h1 class="font-serif text-3xl font-bold leading-tight text-reiki-text md:text-5xl lg:text-6xl mt-3 md:mt-4">
+            O maior ato de amor ao próximo é você cuidar bem de você.
+          </h1>
+
+          <p class="mt-4 md:mt-6 text-base md:text-lg leading-7 md:leading-8 text-reiki-text/80 md:text-xl italic">
+            Uma prática japonesa de auto-cuidado feita com as próprias mãos. Não exige treino, não exige fé, não exige mais tempo do que você tem.
+          </p>
+        </div>
+
+        <!-- Texto âncora — posicionado na base do container flex -->
+        <p class="text-sm md:text-base leading-6 md:leading-7 text-reiki-text/60 mt-4 md:mt-0 mb-2 md:mb-3">
+          Continue lendo para entender como esse gesto pode mudar a sua semana — começando ainda hoje à noite.
+        </p>
+      </div>
+
+      <!-- Coluna Direita: Imagem home.jpg — dominante no mobile, imponente no desktop -->
+      <div class="relative flex items-center justify-center" data-aos="fade-left">
+        <img
+          src="home.jpg"
+          alt="Mulher em momento de autocuidado e presença, representando a prática Reiki do livro Mãos de Cura"
+          class="h-[35vh] sm:h-[40vh] md:h-[500px] lg:h-[580px] w-auto max-w-full object-contain select-none border border-reiki-primary/40 rounded-[2rem]"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 02: O REDEMOINHO — CONEXÃO COM A DOR DA LEITORA (Lead)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-4xl text-center mb-12">
+          <span class="section-kicker">O que você tá sentindo</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            Você não tá errada. Você tá exausta.
+          </h2>
+        </div>
+
+        <div class="flex flex-col gap-8 max-w-3xl mx-auto overflow-visible">
+
+          <!-- Linha 1: Prosa longa -->
+          <div class="space-y-0 rounded-[2rem] bg-white/75 p-8 pb-12 shadow-soft prose-block overflow-visible">
+            <p>
+              Tem horas em que você deita exausta, pega no sono em segundos — e três horas depois acorda do nada.
+            </p>
+            <p>
+              Não é insônia.
+            </p>
+            <p>
+              Você dormiu. Mas o seu corpo te chamou de volta no meio da madrugada e você não sabe por quê.
+              Fica deitada no escuro tentando entender. E enquanto tenta, a cabeça começa a girar.
+            </p>
+            <p>
+              A conversa do trabalho. A coisa que sua filha falou. A conta. Aquela mensagem que você esqueceu de responder. O dia que vem aí.
+              Quando você percebe, são 4h30 e você ainda está acordada.
+            </p>
+            <p>
+              E não é só de madrugada.
+            </p>
+            <p>
+              É no meio da manhã, quando você abre o segundo aplicativo antes de fechar o primeiro. Começa uma coisa.
+              Lembra de outra. Volta pra primeira. Perde o fio. Quando vai ver o relógio, já são três da tarde.
+              E você passou o dia fazendo coisas e não terminou nenhuma direito.
+            </p>
+            <p>
+              Aí à noite, sentada na sala, vem aquela sensação chata. Que ninguém te entende. Que seu marido nem te olha mais.
+              Que sua filha responde torto. Que sua mãe te critica por bobagem. Você suspira e pensa: <em>"tô no meio de um redemoinho. E ninguém percebe."</em>
+            </p>
+            <p>
+              Eu vou te falar uma coisa agora — e quero que você leia respirando devagar.
+            </p>
+            <p class="font-bold text-reiki-darker">
+              Você não tá errada. Você tá exausta. E exausta a gente não enxerga direito.
+            </p>
+          </div>
+
+          <!-- Linha 2: O espelho de Kátia -->
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-8 pb-12 shadow-soft overflow-visible">
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">O espelho do redemoinho.</h3>
+            <div class="mt-5 space-y-4 prose-block">
+              <p>
+                Eu sei porque eu já estive aí. Olhava pro meu marido e via descaso. Olhava pros meus filhos e via desrespeito.
+                Olhava pra minha mãe e via crítica. Cada pessoa em volta parecia estar contribuindo pra eu afundar mais.
+              </p>
+              <p>
+                Até o dia em que eu sentei sozinha e percebi uma coisa. Não é que estavam todos contra mim ao mesmo tempo.
+                É que eu tava tão dentro do redemoinho que tudo do lado de fora chegava torto.
+              </p>
+              <p class="font-bold text-reiki-darker">
+                O problema não era eles. Era que eu tinha parado de me olhar há tanto tempo, que comecei a usar o olhar dos outros como espelho.
+                E quando o espelho é o cansaço, tudo aparece feio.
+              </p>
+              <p>
+                Aí eu entendi. Eu não precisava deles me entendendo melhor. Eu precisava voltar a me ver primeiro.
+                E foi quando eu fiz isso que tudo começou a se ajeitar — sem que eu precisasse cobrar de ninguém em volta nada de diferente.
+              </p>
+              <p>
+                Tem uma frase que eu repito há vinte anos pras minhas alunas, e que talvez seja a coisa mais importante que eu vou te dizer:
+              </p>
+              <p class="font-serif font-bold text-xl text-reiki-darker text-center border-l-4 border-reiki-primary pl-5">
+                "O maior ato de amor ao próximo é você cuidar bem de você."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 03: A CONTA QUE CHEGA — AGITAÇÃO DA DOR
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-4xl text-center mb-12">
+          <span class="section-kicker">O cansaço invisível</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            É um cansaço que dormir não cura.
+          </h2>
+        </div>
+
+        <div class="flex flex-col gap-8 max-w-3xl mx-auto overflow-visible">
+
+          <!-- Linha 1: Uma saudade de você -->
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-8 pb-12 shadow-soft overflow-visible">
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Uma saudade de você…</h3>
+            <div class="mt-5 space-y-0 prose-block">
+              <p>
+                Você já reparou em quantas vezes por dia você diz pra você mesma <em>"eu vou cuidar disso depois"</em>? A consulta médica que você adia há meses.
+                A amiga que te chamou pra um café e você empurrou com a barriga porque não tinha cabeça. Você não tá fugindo. Você tá tentando sobreviver.
+              </p>
+              <p>
+                Mas tem uma conta que vai chegando.
+              </p>
+              <p>
+                Tem dia que você liga o chuveiro, entra debaixo da água quente, e fica ali parada — não porque tá relaxando, mas porque é o único lugar da casa onde ninguém vai te chamar.
+              </p>
+              <p>
+                Tem dia que você abre o armário pra escolher uma roupa e fecha do mesmo jeito, porque pensar nisso já é demais.
+                Tem dia que você passa por um espelho e nem se reconhece direito. Não é que envelheceu. É que tem alguém ali dentro que parece exausta de um jeito que ainda não dá pra explicar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Linha 2: Prosa longa -->
+          <div class="space-y-0 rounded-[2rem] bg-white/75 p-8 pb-12 shadow-soft prose-block overflow-visible">
+            <p>
+              E quando alguém te pergunta <em>"tudo bem?"</em>, você responde <em>"tô cansada"</em> e finge que é a resposta inteira. Mas não é.
+              Cansada todo mundo fica. O que você sente é diferente. É um cansaço que dormir não cura. Que o fim de semana não repõe. Que as férias não consertam.
+            </p>
+            <p>
+              E às vezes, no meio da tarde, no meio do nada, vem aquela tristeza que aparece sem motivo. Você não sabe explicar.
+              Não aconteceu nada de errado. Mas vem. Não é depressão. É uma saudade. Saudade de você. Da sua essência.
+              Daquela mulher que você era antes do redemoinho começar.
+            </p>
+            <p class="font-bold text-reiki-darker">
+              O que você tá sentindo não é problema de uma camada só. É corpo cansado, mente cheia e coração desconectado — os três ao mesmo tempo.
+            </p>
+            <p class="font-bold text-reiki-darker">
+              Você precisa de um gesto que toque os três ao mesmo tempo.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 04: O CAMINHO DE VOLTA — APRESENTAÇÃO DO GESTO
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+        <div class="flex flex-col gap-10 max-w-3xl mx-auto">
+
+          <!-- Linha 1: Prosa — O gesto japonês -->
+          <div data-aos="fade-up">
+            <span class="section-kicker">O gesto japonês</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Um gesto antigo que cabe em três respirações.
+            </h2>
+
+            <div class="mt-6 space-y-5 prose-block text-reiki-text/80">
+              <p>
+                Meu nome é Kátia. Há vinte anos eu acompanho mulheres a saírem desse redemoinho. Não com motivação.
+                Não com mais um livro de auto-ajuda. Não com mais uma lista de hábitos pra encaixar numa agenda que já não cabe.
+              </p>
+              <p>
+                Com um gesto.
+              </p>
+              <p>
+                Um gesto antigo, japonês, que cabe em três respirações. Você senta onde estiver. Põe as duas mãos no centro do peito, uma sobre a outra. Inspira fundo. Solta. Repete três vezes.
+              </p>
+              <p>
+                Na primeira vez, você sente só o seu coração batendo mais forte do que você imaginava. Mas no terceiro ou quarto dia que você fizer isso,
+                geralmente vem uma mensagem das minhas alunas dizendo a mesma coisa, com palavras parecidas:
+              </p>
+              <p class="font-serif font-bold text-xl text-reiki-darker text-center border-l-4 border-reiki-primary pl-5">
+                "Kátia, minha cabeça acalmou."
+              </p>
+            </div>
+          </div>
+
+          <!-- Linha 2: O que acontece depois -->
+          <div data-aos="fade-up" class="overflow-visible">
+            <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-8 pb-12 shadow-soft overflow-visible">
+              <h3 class="font-serif text-2xl font-bold text-reiki-text">O que acontece depois.</h3>
+              <div class="mt-5 space-y-0 prose-block text-reiki-text/80">
+                <p>
+                  Sem esforço pra parar de pensar. Sem precisar fugir do mundo. Sem virar monge. A cabeça acalma sozinha — porque ela finalmente teve um lugar pra pousar. E quando a cabeça acalma, o resto se ajeita.
+                </p>
+                <p>
+                  Você dorme a noite inteira. Termina o que começa. Reage diferente quando alguém te responde torto. Volta a se reconhecer quando passa na frente do espelho. Você volta pra você.
+                </p>
+                <p>
+                  Esse gesto vem de uma tradição japonesa de cura chamada Reiki. E é só o começo.
+                </p>
+                <p>
+                  Eu reuni esse e outros gestos, princípios e práticas — todos simples, todos ensinados passo a passo, todos pensados pra mulher que tem 5 minutos no dia, não 50 — num livro chamado <strong>Mãos de Cura</strong>.
+                </p>
+                <p>
+                  Foi escrito pra mulher que está carregando o redemoinho há tanto tempo que esqueceu como era antes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 05: CHAMA REIKI — DESMISTIFICAÇÃO
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-4xl text-center mb-12">
+          <span class="section-kicker">Chama Reiki</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            Não precisa de dom, de fé, nem de experiência prévia.
+          </h2>
+        </div>
+
+        <!-- Grid assimétrico: texto + imagem meditando.avif como quebra narrativa -->
+        <div class="grid gap-8 md:grid-cols-[1fr_0.85fr] md:items-start mb-10 overflow-visible">
+
+          <!-- Prosa — esquerda -->
+          <div class="space-y-0 rounded-[2rem] bg-white/75 p-8 pb-12 shadow-soft prose-block overflow-visible">
+            <p>
+              Esse gesto que eu te ensinei lá no começo — duas mãos no peito, três respirações — vem de uma tradição japonesa que existe há mais de cem anos.
+            </p>
+            <p class="font-bold text-reiki-text">
+              Chama Reiki.
+            </p>
+            <p>
+              Talvez você já tenha ouvido falar e achado bonito, mas pensado que não era pra você. Talvez ache que precisa de "dom" pra praticar.
+              Talvez tenha medo de que seja místico demais. Eu já ouvi tudo isso. E eu vou te dizer com toda calma do mundo:
+            </p>
+            <p class="font-bold text-reiki-darker">
+              não é nada disso.
+            </p>
+            <p>
+              <strong>Reiki é, antes de qualquer coisa, uma prática de auto-cuidado feita com as mãos.</strong>
+            </p>
+            <p>
+              Você senta. Põe as mãos em pontos do seu próprio corpo. Respira. Repete frases simples que ensinam a sua mente a desacelerar.
+              E o seu sistema nervoso responde. Sua frequência cardíaca baixa. Sua mente para de girar. Seu corpo começa a soltar o que estava segurando.
+            </p>
+            <p>
+              Isso acontece sem fé. Acontece sem religião. Acontece em qualquer mulher de qualquer crença, porque o que está acontecendo no seu corpo é real e mensurável.
+            </p>
+            <p>
+              Quem é da prática diz que existe uma energia universal envolvida — a tal "energia vital", o Ki. Eu acredito nisso. Vinte anos de prática me deram certeza.
+            </p>
+            <p>
+              Mas você não precisa acreditar pra começar.
+            </p>
+            <p>
+              Você só precisa fazer.
+            </p>
+            <p>
+              O efeito vem antes da fé. A fé vem depois — quando você já sentiu, já viveu, já viu acontecer. É assim que eu ensino. É assim que está nesse livro.
+            </p>
+          </div>
+
+          <!-- Imagem meditando.avif — quebra narrativa visual -->
+          <div class="flex flex-col items-center justify-center overflow-visible" data-aos="fade-left">
+            <div class="rounded-[2rem] overflow-visible shadow-soft border border-reiki-primary/20 w-full pb-8">
+              <img
+                src="meditando.avif"
+                alt="Mulher meditando com presença e calma, em prática de autocuidado com Reiki"
+                class="w-full h-auto object-cover rounded-[2rem]"
+                loading="lazy"
+              >
+            </div>
+            <p class="text-center text-sm text-reiki-text/50 italic mt-4 px-4">
+              "O efeito vem antes da fé."
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Painel destaque: o efeito vem antes da fé -->
+        <div class="rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-8 pb-12 shadow-soft max-w-3xl mx-auto overflow-visible">
+          <h3 class="font-serif text-2xl font-bold text-reiki-text text-center">O efeito vem antes da fé.</h3>
+          <div class="mt-5 space-y-0 prose-block text-reiki-text/80 text-center">
+            <p>
+              Você apoia as mãos no peito, respira fundo, e seu sistema nervoso desacelera. Só isso. A camada espiritual existe pra quem quiser, depois — mas não é obrigatória pra começar.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="watercolor-divider">
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 06: POR QUE O QUE JÁ TENTOU NÃO FUNCIONOU
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-4xl text-center mb-12">
+          <span class="section-kicker">O ciclo cruel</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            Você não falhou. Você nem chegou a tentar.
+          </h2>
+        </div>
+
+        <div class="max-w-[680px] mx-auto prose-block text-reiki-text/85 mb-8 space-y-5 text-left md:text-justify">
+          <p>
+            E olha — eu sei o que você tem feito.
+          </p>
+          <p>
+            Você fica pensando. Pensa que vai começar a fazer yoga semana que vem. Pensa que vai voltar pra academia agora em janeiro. Pensa que vai marcar uma terapia. Pensa que devia ler aquele livro que sua amiga indicou.
+          </p>
+          <p>
+            Pensa, pensa, pensa. E nunca começa.
+          </p>
+          <p>
+            Não é preguiça. Eu sei que não é. Cada uma dessas opções exige um esforço que você não tem mais pra dar.
+          </p>
+        </div>
+
+        <!-- Cards das opções que não funcionam -->
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-8 overflow-visible">
+          <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6 pb-8 shadow-soft overflow-visible">
+            <p class="font-serif text-2xl font-bold text-reiki-gold/70 mb-2">🧘</p>
+            <h3 class="font-serif text-lg font-bold text-reiki-text">A yoga</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">
+              Pede uma hora do seu sábado e um deslocamento que você não consegue encaixar.
+            </p>
+          </article>
+          <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6 pb-8 shadow-soft overflow-visible">
+            <p class="font-serif text-2xl font-bold text-reiki-gold/70 mb-2">🏃</p>
+            <h3 class="font-serif text-lg font-bold text-reiki-text">A academia</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">
+              Pede disciplina pra ir três vezes por semana num horário que sua rotina não tem.
+            </p>
+          </article>
+          <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6 pb-8 shadow-soft overflow-visible">
+            <p class="font-serif text-2xl font-bold text-reiki-gold/70 mb-2">💬</p>
+            <h3 class="font-serif text-lg font-bold text-reiki-text">A terapia</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">
+              Pede um compromisso de meses e um valor por mês que pesa no orçamento.
+            </p>
+          </article>
+          <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6 pb-8 shadow-soft overflow-visible">
+            <p class="font-serif text-2xl font-bold text-reiki-gold/70 mb-2">📖</p>
+            <h3 class="font-serif text-lg font-bold text-reiki-text">O livro</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">
+              Pede silêncio e cabeça pra ler — e silêncio é exatamente o que falta.
+            </p>
+          </article>
+        </div>
+
+        <div class="max-w-[680px] mx-auto prose-block text-reiki-text/85 mt-8 space-y-5 text-left md:text-justify">
+          <p>
+            Você não falhou em nenhuma delas. Você nem chegou a tentar — porque todas pedem energia que você não tem agora.
+          </p>
+          <p>
+            É um ciclo cruel: você precisa de descanso pra conseguir cuidar de você. Mas você precisa cuidar de você pra conseguir descansar.
+            E você fica girando em volta disso há tanto tempo que já nem percebe.
+          </p>
+          <p>
+            Eu quero te dizer uma coisa que talvez ninguém tenha te dito ainda.
+          </p>
+          <p>
+            O que você tá sentindo não é problema de uma camada só. É corpo cansado, mente cheia e coração desconectado — os três ao mesmo tempo.
+          </p>
+          <p>
+            Yoga trabalha o corpo. Terapia trabalha a mente. Livro trabalha a inspiração. Cada um trata uma camada. E o seu problema não tá numa camada. Tá nas três juntas.
+          </p>
+          <p class="font-bold text-reiki-darker">
+            Você precisa de um gesto que toque os três ao mesmo tempo.
+            Que use o corpo pra acalmar a mente. Que use a mente pra liberar a emoção. Que use a emoção pra reconectar você com você mesma.
+            Um gesto só. Que funcione em camadas, em silêncio, sem precisar entender filosofia.
+          </p>
+          <p>
+            É exatamente isso que você vai aprender no Mãos de Cura.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 07: CREDENCIAL — 20 ANOS + OS TRÊS PILARES
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-3xl prose-block text-reiki-text/85 mb-14 space-y-5">
+          <p>
+            Eu trabalho com Reiki há vinte anos. Mais de três linhagens de mestrado. Mais de duas mil alunas formadas.
+            Um canal no YouTube com mais de oitenta mil mulheres acompanhando. Livros publicados.
+          </p>
+          <p>
+            E em todos esses anos, uma coisa ficou clara pra mim: <strong>a maioria dos livros e dos cursos de Reiki são escritos pra reikianos.</strong>
+          </p>
+          <p>
+            Pra quem já está dentro. Pra quem já fez iniciação. Pra quem já fala a língua. Isso é uma falha enorme — porque a mulher que mais precisa
+            desse trabalho é justamente a que ainda não chegou nele.
+          </p>
+          <p>
+            Então eu fiz uma coisa diferente. Peguei tudo que eu aprendi em vinte anos — todos os princípios, todas as técnicas, todas as práticas que mudaram a minha vida e a vida das minhas alunas — e organizei num sistema simples, em três pilares,
+            que qualquer mulher pode começar a usar hoje à noite, antes de dormir.
+          </p>
+          <p class="font-bold text-reiki-darker">
+            Esse sistema se chama Método Mãos de Cura. O método tem três pilares. Você vai aprender os três no livro.
+          </p>
+        </div>
+
+        <!-- Grid dos 3 Pilares -->
+        <div class="grid gap-6 md:grid-cols-3 overflow-visible">
+          <article class="module-card rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-8 pb-12 shadow-soft overflow-visible" data-aos="fade-up">
+            <p class="font-serif text-4xl font-bold text-reiki-gold/70 mb-2">01</p>
+            <h3 class="font-serif text-xl font-bold text-reiki-text mt-2">Pilar 1: Os Cinco Princípios.</h3>
+            <p class="mt-4 text-sm leading-6 text-reiki-text/70">
+              São cinco frases curtas, ensinadas pelo fundador do Reiki há mais de cem anos. Não são mantras. Não são afirmações de auto-ajuda. São direcionamentos práticos pra mente — coisas como <em>"só por hoje, eu sou calma"</em> e <em>"só por hoje, eu confio"</em>.
+              Você lê de manhã, lê à noite, e em poucos dias começa a notar que sua reação mudou. Você ainda passa por situações difíceis. Mas reage diferente. Não explode, não trava, não fica revivendo a cena por horas depois.
+            </p>
+          </article>
+
+          <article class="module-card rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-8 pb-12 shadow-soft overflow-visible" data-aos="fade-up" data-aos-delay="80">
+            <p class="font-serif text-4xl font-bold text-reiki-gold/70 mb-2">02</p>
+            <h3 class="font-serif text-xl font-bold text-reiki-text mt-2">Pilar 2: As Mãos.</h3>
+            <p class="mt-4 text-sm leading-6 text-reiki-text/70">
+              O Reiki ensina pontos específicos do seu próprio corpo onde você apoia as mãos pra acalmar áreas específicas: o peito, a barriga, a cabeça, o pescoço.
+              Cada ponto trabalha um aspecto. As mãos no peito acalmam a mente acelerada. As mãos na barriga liberam a tensão acumulada. As mãos na cabeça ajudam o sono.
+              Você não precisa decorar nada. O livro mostra cada posição com clareza.
+            </p>
+          </article>
+
+          <article class="module-card rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-8 pb-12 shadow-soft overflow-visible" data-aos="fade-up" data-aos-delay="160">
+            <p class="font-serif text-4xl font-bold text-reiki-gold/70 mb-2">03</p>
+            <h3 class="font-serif text-xl font-bold text-reiki-text mt-2">Pilar 3: A Respiração.</h3>
+            <p class="mt-4 text-sm leading-6 text-reiki-text/70">
+              A ponte entre os outros dois. Os princípios entram pela mente, as mãos entram pelo corpo, e a respiração faz a comunicação acontecer.
+              É uma respiração simples — não é técnica de yoga, não exige treino. É a respiração que você já faz quando suspira fundo no fim do dia. A diferença é que aqui você faz com intenção.
+              Os três pilares juntos formam o Método Mãos de Cura.
+            </p>
+          </article>
+        </div>
+
+        <div class="mx-auto max-w-3xl prose-block text-reiki-text/80 mt-10 space-y-4">
+          <p>
+            Não é teoria. É uma prática de cinco minutos que cabe em qualquer rotina, que funciona em qualquer crença, e que entrega resultado nos primeiros dias.
+          </p>
+          <p>
+            E o livro Mãos de Cura é o ponto de partida desse método. Foi escrito pra você que tá lendo isso agora.
+          </p>
+        </div>
+
+        <div class="text-center mt-12 overflow-visible">
+          <a href="#checkout" class="btn-primary inline-block rounded-full px-10 py-5 text-base font-bold shadow-xl hover:shadow-2xl mb-4">
+            Quero acalmar minha mente
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 08: O LIVRO COMO OBJETO
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+        <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+
+          <!-- Texto -->
+          <div data-aos="fade-right">
+            <span class="section-kicker">O livro</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Um livro feito pra ser lido no seu tempo.
+            </h2>
+
+            <div class="mt-6 space-y-5 prose-block text-reiki-text/80">
+              <p>
+                O Mãos de Cura é um livro digital que fica disponível dentro do meu portal de alunos. Você ganha acesso permanente a esse livro nesse espaço,
+                e pode acessar pelo seu celular ou computador a qualquer hora.
+              </p>
+              <p>
+                Você compra agora, e em poucos minutos recebe o link de acesso. Entra na sua área, e o livro está lá. Pronto pra você abrir e começar.
+              </p>
+              <p>
+                Ele foi pensado pra ser lido em pedaços pequenos — porque eu sei que sua atenção tá curta. Você lê umas páginas tomando café da manhã.
+                Lê mais um pouco sentada na sala depois do almoço. Lê dez minutos antes de dormir, deitada na cama.
+                Não é um livro pra ler de uma vez. É um livro pra ler no seu tempo, do jeito que sua semana permitir.
+              </p>
+              <p>
+                Ao longo do livro você vai encontrar exemplos práticos pra aplicar em diferentes situações do seu dia — quando você acordar de madrugada,
+                quando estiver no meio de um momento difícil no trabalho, quando alguém te tirar do sério, quando você precisar dormir melhor à noite.
+                Cada uma dessas práticas leva de cinco a dez minutos. Você lê, faz, fecha o livro, segue o seu dia.
+              </p>
+              <p>
+                E no fim do livro, você encontra um <strong>Cronograma de 7 Dias do Método Mãos de Cura</strong> — um mapa simples que te diz exatamente qual capítulo ler em cada dia da primeira semana,
+                e qual prática fazer. Você não precisa decidir nada. É só seguir.
+              </p>
+              <p>
+                No sétimo dia, você terá feito mais práticas reais do que em qualquer livro que comprou nos últimos anos.
+              </p>
+              <p>
+                Não porque você é mais disciplinada agora. Porque o livro é desenhado pra caber em quem não tem tempo nem cabeça pra mais nada.
+              </p>
+            </div>
+          </div>
+
+          <!-- Imagem da capa local — transparência nativa do PNG, sem container opaco -->
+          <div class="flex justify-center items-center overflow-visible" data-aos="fade-left">
+            <img
+              src="maos-de-cura.png"
+              alt="Capa 3D do livro Mãos de Cura"
+              class="w-full max-w-[220px] md:max-w-sm mx-auto object-contain select-none"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 09: O QUE VOCÊ VAI DESCOBRIR — BULLETS
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-3xl text-center mb-10">
+          <span class="section-kicker">O que você vai aprender</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+            No livro Mãos de Cura:
+          </h2>
+        </div>
+
+        <div class="rounded-[2rem] bg-white/75 p-8 md:p-10 shadow-soft max-w-4xl mx-auto">
+          <ul class="space-y-6">
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                O gesto japonês de 5 minutos que descarrega a mente acelerada quando a cabeça não quer parar de girar — funciona em qualquer lugar, sem ninguém precisar saber.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                Os cinco princípios que mais de cem anos de prática transformaram em direcionamento diário pra mulheres que vivem no automático — você lê em vinte segundos, aplica em qualquer dia.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                A posição exata das mãos pra noites em que você acorda de madrugada e não consegue voltar a dormir — pode fazer ainda na cama, sem acender a luz.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                Por que tentar "esvaziar a mente" não funciona — e o que fazer no lugar quando os pensamentos não querem parar.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                A respiração simples que você já faz quando suspira fundo no fim do dia — e como transformar ela em ferramenta de cura quando feita com intenção.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                Como identificar o que está te tirando energia sem que você perceba — e o que fazer pra recuperar.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                O exercício para os momentos em que você está prestes a explodir com alguém que você ama — pode aplicar antes mesmo da palavra sair da boca.
+              </p>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-reiki-support border border-reiki-primary/30 flex items-center justify-center text-reiki-deep font-bold text-sm">✦</span>
+              <p class="prose-block text-reiki-text/85">
+                A prática japonesa de cinco minutos antes de dormir que vai te ajudar a desligar a mente, soltar o peso do dia e voltar pra você mesma — começando hoje à noite.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 10: SOBRE A KÁTIA
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+        <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+
+          <div data-aos="fade-right">
+            <span class="section-kicker">Sua mentora</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Quem é a Mestra Kátia Maciel?
+            </h2>
+            <div class="mt-6 space-y-5 prose-block text-reiki-text/80">
+              <p>
+                Eu não cheguei nesse trabalho por um caminho fácil, e provavelmente é por isso que ele faz sentido pra você agora.
+              </p>
+              <p>
+                Eu já fui aquela mulher que olhava o teto às 3 da manhã se perguntando o que tinha de errado comigo.
+              </p>
+              <p>
+                Já fui aquela mulher que entrava debaixo do chuveiro pra ter um minuto de paz longe da família.
+              </p>
+              <p>
+                Já fui aquela mulher que olhava no espelho e não reconhecia direito quem estava ali.
+              </p>
+              <p>
+                Foi por isso que eu escrevi esse livro do jeito que escrevi. Não como uma mestra falando do alto do tatame pra discípulas. Como uma mulher que esteve no mesmo redemoinho que você está agora, e que tropeçou em algo que mudou tudo.
+              </p>
+              <p>
+                Não foi mágica. Foi prática. Foi paciência. Foi começar com um gesto de cinco minutos antes de dormir, depois outro pela manhã, depois ir descobrindo, dia a dia, que aquilo estava me costurando de volta.
+              </p>
+              <p>
+                Hoje, vinte anos depois, eu tenho mais de três linhagens de mestrado em Reiki. Tenho mais de duas mil mulheres formadas pelos meus cursos. Tenho um canal no YouTube com mais de oitenta mil mulheres acompanhando. Tenho associações profissionais que reconhecem meu trabalho.
+              </p>
+              <p>
+                Mas nada disso é o que importa.
+              </p>
+              <p class="font-bold text-reiki-darker">
+                O que importa é que eu sei exatamente como é estar onde você está agora — e eu sei o caminho de volta. Esse livro é esse caminho, escrito do jeito mais simples e direto que eu consegui fazer.
+              </p>
+              <p>
+                Pra você que está cansada de ler livro complicado. Pra você que não tem tempo nem cabeça pra mais um curso. Pra você que precisa começar hoje.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-8 pb-12 shadow-soft overflow-visible" data-aos="fade-left">
+            <div class="flex flex-col items-center gap-5 text-center">
+              <img
+                src="https://felizcomreiki.com.br/wp-content/uploads/2026/06/katia-imagem-7.png"
+                alt="Kátia Maciel, Mestra de Reiki e autora do livro Mãos de Cura"
+                class="h-64 w-64 rounded-[2rem] object-cover shadow-soft md:h-80 md:w-80"
+                loading="lazy"
+              >
+              <blockquote class="font-serif text-xl font-bold leading-9 text-reiki-text">
+                "O maior ato de amor ao próximo é você cuidar bem de você."
+              </blockquote>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 11: PROVA SOCIAL — DEPOIMENTOS
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="mx-auto max-w-3xl prose-block text-reiki-text/80 mb-10 space-y-4">
+          <p>
+            Em vinte anos de trabalho, eu recebi mensagens, áudios e cartas de centenas de mulheres me contando o que mudou na vida delas depois que começaram a aplicar o que está nesse livro.
+          </p>
+          <p>
+            Mulheres que fizeram meus cursos online. Mulheres que me acompanham pelo YouTube. Mulheres que aprenderam comigo o mesmo método, os mesmos princípios, as mesmas práticas que você vai encontrar nessas páginas.
+          </p>
+          <p class="font-bold text-reiki-darker">
+            O que mudou na vida delas, pode mudar na sua.
+          </p>
+        </div>
+
+        <div class="mx-auto max-w-3xl text-center mb-10">
+          <span class="section-kicker">Resultados reais</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+            O que acontece quando uma mulher para e volta pra si.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mb-12 overflow-visible">
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/1.png" alt="Depoimento 1 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/2.png" alt="Depoimento 2 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/3.png" alt="Depoimento 3 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/4.png" alt="Depoimento 4 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/5.png" alt="Depoimento 5 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+          <div class="module-card rounded-[1.5rem] shadow-card overflow-visible">
+            <img src="Depoimentos/6.png" alt="Depoimento 6 de aluna" class="w-full h-auto object-contain rounded-[1.5rem] block mx-auto select-none" loading="lazy">
+          </div>
+        </div>
+
+        <p class="text-center text-reiki-text/65 italic mt-10 text-base max-w-2xl mx-auto">
+          Esses depoimentos não são exceção. São o que acontece quando uma mulher para um pouco e volta pra si mesma.
+          E é exatamente isso que eu quero pra você. Por isso esse livro existe.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 12: STACK DE VALOR + BÔNUS
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-4xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+
+        <div class="rounded-[2.5rem] border border-reiki-gold/30 bg-white/80 p-8 pb-12 md:p-12 md:pb-16 shadow-soft overflow-visible">
+          <div class="text-center">
+            <span class="section-kicker">O que você recebe</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Vamos somar tudo que você recebe ao comprar agora:
+            </h2>
+          </div>
+
+          <div class="mt-10 space-y-8">
+
+            <div class="border-b border-reiki-primary/20 pb-6">
+              <h3 class="font-serif text-xl font-bold text-reiki-text">O livro Mãos de Cura</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                O método completo da Kátia, organizado em três pilares — Os Cinco Princípios, As Mãos e A Respiração — para você começar a praticar Reiki como auto-cuidado a partir de hoje.
+              </p>
+              <p class="mt-2 text-sm text-reiki-text/50 italic">Comparação real: livros impressos sobre Reiki em livraria custam entre R$ 60 e R$ 120.</p>
+            </div>
+
+            <div class="border-b border-reiki-primary/20 pb-6">
+              <h3 class="font-serif text-xl font-bold text-reiki-text">Cronograma de 7 Dias do Método (incluso no livro)</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                Sua primeira semana já organizada. Qual capítulo ler em cada dia. Qual prática fazer. Sem precisar decidir nada — é só seguir e completar a primeira jornada.
+              </p>
+            </div>
+
+            <div class="border-b border-reiki-primary/20 pb-6">
+              <h3 class="font-serif text-xl font-bold text-reiki-text">🎙️ Bônus 1: Os 5 Princípios em Voz Alta</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                Áudio guiado com a voz da Kátia recitando os Cinco Princípios do Reiki, com pausas pra respiração entre eles. Você coloca pra tocar de manhã enquanto se arruma, antes de dormir, ou em qualquer momento do dia em que precisar reencontrar a calma. Em poucos dias, os princípios viram parte de você.
+              </p>
+              <p class="mt-2 text-sm text-reiki-text/50 italic">Comparação real: meditações guiadas com instrutores certificados custam entre R$ 30 e R$ 80 cada.</p>
+            </div>
+
+            <div class="border-b border-reiki-primary/20 pb-6">
+              <h3 class="font-serif text-xl font-bold text-reiki-text">🖼️ Bônus 2: Os 5 Princípios pra Você Ver Todo Dia</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                Pacote de cards imprimíveis, em quatro tamanhos diferentes, pra você espalhar pela sua casa, pelo seu trabalho, pela sua bolsa.
+              </p>
+              <p class="mt-2 leading-7 text-reiki-text/70">
+                Tem o tamanho meia página, pra você imprimir e colar onde quiser passar os olhos todo dia. Tem o tamanho 10x15, pra você plastificar e colocar num porta-retratos na sua mesa. Tem o tamanho de carteira, pra você carregar com você. E tem uma folha com quatro cards pequenos pra recortar e distribuir.
+              </p>
+              <p class="mt-2 leading-7 text-reiki-text/70">
+                Os princípios deixam de estar no livro. Passam a estar no espelho do banheiro, na geladeira, na sua mesa de trabalho, na sua bolsa.
+              </p>
+            </div>
+
+            <div class="border-b border-reiki-primary/20 pb-6">
+              <h3 class="font-serif text-xl font-bold text-reiki-text">🔑 Acesso vitalício ao seu portal</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                O livro e os bônus ficam disponíveis pra sempre na sua área de alunos. Você acessa pelo celular ou pelo computador, a qualquer hora.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-xl font-bold text-reiki-text">🔄 Atualizações futuras gratuitas</h3>
+              <p class="mt-3 leading-7 text-reiki-text/70">
+                Sempre que eu atualizar o conteúdo do livro com novos exercícios, novas histórias ou novas práticas — você recebe a versão nova sem pagar nada.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-reiki-primary/20 space-y-3">
+            <p class="text-center text-reiki-text/70 italic">Tudo isso, junto, faz parte do que você leva por um único pagamento.</p>
+            <p class="text-center text-reiki-text/60 text-sm italic">Pra você ter referência: uma única sessão de Reiki presencial em um centro de terapia custa entre R$ 120 e R$ 200. Um curso introdutório de Reiki online custa entre R$ 300 e R$ 800. Um livro impresso de espiritualidade em livraria custa entre R$ 60 e R$ 120.</p>
+            <p class="text-center font-bold text-reiki-text text-lg mt-4">Aqui você está levando o método completo da Kátia, mais bônus, mais acesso vitalício, mais atualizações futuras.</p>
+            <p class="text-center font-serif font-bold text-2xl text-reiki-gold mt-2">Por menos do que custa um café com bolo na padaria.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 13: GARANTIA INCONDICIONAL
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24">
+      <div class="mx-auto max-w-4xl px-6 md:px-12 lg:px-16" data-aos="fade-up">
+        <div class="rounded-[2.5rem] border border-reiki-gold/30 bg-white/75 p-8 pb-12 md:p-12 md:pb-16 shadow-soft text-center overflow-visible">
+          <div class="text-5xl mb-4">🛡️</div>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-reiki-text mb-6">A minha promessa pra você</h2>
+          <div class="prose-block text-reiki-text/80 max-w-2xl mx-auto space-y-4 text-left md:text-center">
+            <p>
+              Eu sei que comprar pela internet sempre dá um friozinho na barriga.
+            </p>
+            <p>
+              Por isso quero te tranquilizar antes mesmo da sua decisão.
+            </p>
+            <p>
+              Você compra agora, abre o livro no seu portal, lê com calma, faz as práticas dos primeiros dias.
+            </p>
+            <p>
+              Se em 7 dias você sentir que isso não é pra você — que não te ajudou em nada, que não fez sentido, que não foi o que você esperava — você me manda uma mensagem.
+            </p>
+            <p>
+              Eu te devolvo cada centavo do seu dinheiro. Sem perguntas. Sem você ter que explicar.
+            </p>
+            <p class="font-bold text-reiki-darker">
+              E o livro fica com você.
+            </p>
+            <p>
+              Mesmo se você pedir reembolso, o livro continua disponível na sua área, pra você usar quando quiser. Eu não tiro de volta o que já te dei.
+            </p>
+            <p>
+              Se algum dia você precisar — em uma noite difícil, em um momento difícil que vai aparecer um dia — ele estará ali, esperando.
+            </p>
+            <p>
+              Eu faço isso porque eu acredito tanto no que escrevi nesse livro, que prefiro perder o pagamento do que você ficar sem.
+            </p>
+            <p>
+              Se ele te ajudar — eu fico feliz com a venda.
+            </p>
+            <p>
+              Se ele não te ajudar — você ainda fica com algo que pode te servir lá na frente.
+            </p>
+            <p class="font-bold text-reiki-darker">
+              Os dois lados ganham. E você não tem o que perder começando.
+            </p>
+          </div>
+          <p class="text-sm text-reiki-text/50 mt-6">Garantia incondicional de 7 dias — protegida pela plataforma de pagamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 14: PREÇO & CHECKOUT DINÂMICO MULTI-PAÍS
+         IDs mantidos para integração com geo-checkout.js
+         ═══════════════════════════════════════════════════════ -->
+    <section id="checkout" class="py-16 md:py-24 overflow-visible">
+      <div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16 rounded-[2.5rem] border border-reiki-primary/25 bg-white/80 p-8 pb-12 text-center shadow-soft md:p-12 md:pb-16 overflow-visible" data-aos="zoom-in">
+
+        <span class="section-kicker">O convite</span>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+          Você está a um clique de começar.
+        </h2>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-reiki-text/80 italic">
+          Tudo que eu te apresentei aqui — o livro, o cronograma, o áudio dos princípios, os cards, o acesso vitalício, as atualizações futuras, a minha promessa de devolução — tudo isso é seu por um único pagamento.
+        </p>
+
+        <div class="mx-auto mt-10 max-w-md overflow-visible">
+
+          <!-- ESTADO 1: LOADING -->
+          <div id="checkout-loading" class="rounded-[2rem] bg-reiki-support p-8 overflow-visible">
+            <div class="animate-pulse">
+              <p class="text-sm font-bold uppercase tracking-editorial text-reiki-deep">Preparando seu checkout...</p>
+              <span class="block mt-2 text-xs text-reiki-text/50">Ajustando a moeda para a sua localização</span>
+            </div>
+          </div>
+
+          <!-- ESTADO 2: BRASIL -->
+          <div id="checkout-br" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8 overflow-visible">
+            <p class="text-sm font-bold uppercase tracking-editorial text-reiki-deep">Para Brasil</p>
+            <div class="mt-4">
+              <p class="text-sm text-reiki-text/50 line-through">R$ 47</p>
+              <p class="font-serif text-5xl font-bold text-reiki-text mt-1">10x R$ 4,39</p>
+              <p class="mt-1 text-sm text-reiki-text/70">ou R$ 37 à vista</p>
+            </div>
+            <div class="overflow-visible">
+              <a href="http://felizcomreiki.com.br/maos-de-cura-ckbr" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold shadow-xl hover:shadow-2xl mb-4">
+                Começar minha jornada
+              </a>
+            </div>
+            <p class="text-xs text-reiki-text/40 mt-4">🔒 Pagamento seguro · Acesso imediato · Garantia de 7 dias</p>
+          </div>
+
+          <!-- ESTADO 3: EUROPA -->
+          <div id="checkout-eu" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8 overflow-visible">
+            <p class="text-sm font-bold uppercase tracking-editorial text-reiki-deep">Para Europa</p>
+            <div class="mt-4">
+              <p class="text-sm text-reiki-text/50 line-through">€ 12</p>
+              <p class="font-serif text-5xl font-bold text-reiki-text mt-1">€ 9</p>
+            </div>
+            <div class="overflow-visible">
+              <a href="http://felizcomreiki.com.br/maos-de-cura-ckeu" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold shadow-xl hover:shadow-2xl mb-4">
+                Começar minha jornada
+              </a>
+            </div>
+            <p class="text-xs text-reiki-text/40 mt-4">🔒 Secure payment · Immediate access · 7-day guarantee</p>
+          </div>
+
+          <!-- ESTADO 4: INTERNACIONAL -->
+          <div id="checkout-intl" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8 overflow-visible">
+            <p class="text-sm font-bold uppercase tracking-editorial text-reiki-deep">International Visitors</p>
+            <div class="mt-4">
+              <p class="text-sm text-reiki-text/50 line-through">$ 12</p>
+              <p class="font-serif text-5xl font-bold text-reiki-text mt-1">$ 9</p>
+            </div>
+            <div class="overflow-visible">
+              <a href="http://felizcomreiki.com.br/maos-de-cura-ckintl" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold shadow-xl hover:shadow-2xl mb-4">
+                Start my journey
+              </a>
+            </div>
+            <p class="text-xs text-reiki-text/40 mt-4">🔒 Secure payment · Immediate access · 7-day guarantee</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 15: PERGUNTAS FREQUENTES
+         ═══════════════════════════════════════════════════════ -->
+    <section class="py-16 md:py-24 overflow-visible">
+      <div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
+        <div class="rounded-[2.5rem] bg-white/75 p-8 pb-12 shadow-soft md:p-10 md:pb-14 overflow-visible" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">Perguntas que outras mulheres fizeram antes de começar</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+              O que você precisa saber antes de começar.
+            </h3>
+          </div>
+
+          <div class="mx-auto mt-10 max-w-4xl space-y-4">
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Eu não sou reikiana. Vou conseguir aplicar mesmo assim?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Sim. Esse livro foi escrito exatamente pra mulher que ainda não é reikiana e nunca teve contato com a prática. As técnicas que você vai aprender funcionam pelo seu próprio toque, sua própria respiração e sua própria atenção — sem depender de iniciação, sem depender de fé, sem depender de você "sentir energia" de algum jeito específico. Você lê, você faz, você sente o efeito.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Preciso acreditar em alguma religião — ou em algo espiritual — pra isso funcionar?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Não. O Reiki não está ligado a nenhuma religião e não conflita com nenhuma fé. É uma prática energética natural que funciona com mulher católica, evangélica, espírita, budista, ateia ou agnóstica — independente do que você acredita. O efeito das práticas no seu corpo é mensurável independente da sua crença. Você apoia as mãos no peito, respira fundo, e seu sistema nervoso desacelera. Só isso. A camada espiritual existe pra quem quiser, depois — mas não é obrigatória pra começar.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Eu já tentei meditar e não consegui. Isso é diferente?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                É diferente. Meditação tradicional pede que você "esvazie a mente" ou "observe os pensamentos sem reagir" — e pra mulher que tá no meio do redemoinho, isso é praticamente impossível. O método que você vai aprender funciona ao contrário: ele te dá uma âncora física (suas mãos, sua respiração, frases concretas) onde sua mente pousa naturalmente. Você não precisa parar de pensar. Sua mente que para sozinha porque finalmente tem onde se apoiar.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Eu tenho 60+ anos. Esse livro é pra mim também?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                É, e talvez especialmente pra você. Muitas das mulheres que leem meu trabalho hoje têm entre 55 e 75 anos. Estão numa fase em que os filhos saíram, o corpo cobra mais cuidado, e finalmente sobra um espaço pra cuidar de si. Esse livro fala diretamente com você. As práticas são simples, sem esforço físico, e cabem em qualquer rotina — inclusive nas mais tranquilas.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Eu tomo medicação ou tenho condição médica. Posso fazer as práticas?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Pode, com consciência. Reiki e as práticas desse livro são complementares, não substituem nenhum tratamento médico, nenhuma medicação, nenhuma terapia. Eu sempre recomendo que você continue acompanhada pelo seu médico, e use as práticas como apoio adicional pra acalmar a mente, melhorar o sono, soltar tensão. Se você tem alguma condição específica que te deixa em dúvida, conversa com seu médico antes — ele vai te tranquilizar.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Quanto tempo eu preciso por dia?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Cinco a dez minutos. Sério. As práticas do livro foram desenhadas exatamente pra mulher que não tem tempo. Tem práticas de três minutos, de cinco, de dez. Você pode fazer enquanto toma seu café, antes de dormir, ou em qualquer pausa do dia. Se você tem cinco minutos pra rolar Instagram, você tem cinco minutos pra cuidar de você.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">Vou ter acesso a atualizações futuras?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Sim. Qualquer conteúdo novo, exercício novo, prática nova ou bônus extra que eu adicionar ao Mãos de Cura é liberado pra você gratuitamente. Você compra uma vez, e o livro evolui junto com você ao longo do tempo. Acesso vitalício, atualizações vitalícias.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold text-reiki-text">E se eu comprar e perceber que não é pra mim?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition duration-300">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75 text-base">
+                Você tem 7 dias pra avaliar com calma. Se sentir que não é o caminho certo pra você, me manda uma mensagem e eu devolvo seu dinheiro inteiro. Sem perguntas. Sem você ter que justificar. E o livro continua disponível na sua área pra quando você quiser voltar — em uma noite difícil, em um momento difícil que vai aparecer um dia.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO 18: CTA FINAL — FECHAMENTO EMOCIONAL
+         ═══════════════════════════════════════════════════════ -->
+    <section class="bg-reiki-support py-16 md:py-24 overflow-visible">
+      <div class="mx-auto max-w-3xl px-6 md:px-12 text-center" data-aos="fade-up">
+
+        <span class="section-kicker">Antes de você fechar essa página</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-reiki-text mt-4 mb-8">
+          Começa hoje.
+        </h2>
+
+        <div class="prose-block text-reiki-text/75 text-left md:text-center space-y-5 mb-12 max-w-2xl mx-auto">
+          <p>
+            Eu sei que você chegou até aqui. E talvez esteja pensando <em>"deixa eu pensar mais um pouco. Eu volto depois."</em>
+          </p>
+          <p>
+            Eu entendo. Eu também adiava muita coisa quando estava no redemoinho.
+          </p>
+          <p>
+            Mas deixa eu te dizer uma coisa, com todo o carinho:
+          </p>
+          <p>
+            Daqui a uma semana, sua cabeça vai estar girando do mesmo jeito.
+          </p>
+          <p>
+            Daqui a um mês, você vai estar na mesma noite mal dormida.
+          </p>
+          <p>
+            Daqui a três meses, você vai olhar pra trás e perceber que outras três estações passaram, e você ainda está empurrando a sua vida com a barriga.
+          </p>
+          <p>
+            Não porque você é fraca. Porque a vida que você tá vivendo não te dá brecha pra você se cuidar — a menos que você crie essa brecha, agora, com um gesto pequeno.
+          </p>
+          <p class="font-bold text-reiki-darker">
+            Esse livro é esse gesto.
+          </p>
+          <p>
+            Cinco minutos por dia.
+          </p>
+          <p>
+            Mãos no peito. Três respirações. Uma frase simples lida com calma.
+          </p>
+          <p>
+            Não é mágica. Não é sacrifício. É uma forma antiga, cuidadosa, de você voltar pra você.
+          </p>
+          <p>
+            Você não precisa estar pronta. Não precisa acreditar em tudo. Não precisa ter certeza.
+          </p>
+          <p>
+            Só precisa decidir que essa noite vai ser a primeira de uma rotina diferente.
+          </p>
+          <p class="font-bold text-reiki-darker text-xl">
+            O maior ato de amor ao próximo é você cuidar bem de você.
+          </p>
+        </div>
+
+        <div class="overflow-visible">
+          <a href="#checkout" class="btn-primary inline-block rounded-full px-12 py-5 text-lg font-bold shadow-xl hover:shadow-2xl mb-4">
+            Começar minha jornada
+          </a>
+        </div>
+        <p class="text-xs text-reiki-text/40 mt-4">🔒 Compra segura · Acesso imediato · Garantia de 7 dias</p>
+
+        <div class="mt-12 pt-8 border-t border-reiki-primary/20">
+          <span class="text-reiki-text/60 italic block">Com carinho,</span>
+          <span class="font-serif text-2xl italic font-bold text-reiki-text block mt-2">Kátia</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WHATSAPP FLOATING BUTTON
+       Oculto até cruzar a seção #checkout
+       ═══════════════════════════════════════════════════════ -->
+  <div id="whatsappButton" class="whatsapp-float fixed bottom-6 right-6 z-50 flex flex-col items-center">
+    <a
+      href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20livro%20M%C3%A3os%20de%20Cura..."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com suporte pelo WhatsApp"
+      class="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-105 transition-transform"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/>
+      </svg>
+    </a>
+    <span class="whatsapp-label">Dúvidas? clique aqui</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="border-t border-reiki-primary/20 py-8 text-center text-xs text-reiki-text/50">
+    <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-16">
+      <p class="leading-6 mb-3">
+        <a class="hover:text-reiki-deep transition-colors" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep transition-colors" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep transition-colors" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep transition-colors" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep transition-colors" href="https://felizcomreiki.com.br/contato/">Contato</a>
+      </p>
+      <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
+      <p class="mb-3">Desenvolvido por <a href="https://finishweb.com.br/" target="_blank" rel="noopener noreferrer" class="font-bold finish-web-link">Finish Web</a></p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS — Vanilla JS
+       ═══════════════════════════════════════════════════════ -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // 1. AOS
+    AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 80 });
+
+    // 2. Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 3. FAQ Acordeon
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    // 4. WhatsApp Flutuante — oculto no início, exibido ao cruzar #checkout
+    const whatsappButton  = document.getElementById('whatsappButton');
+    const checkoutSection = document.getElementById('checkout');
+
+    function toggleWhatsAppButton() {
+      if (!checkoutSection || !whatsappButton) return;
+      const rect = checkoutSection.getBoundingClientRect();
+      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+      if (isVisible) {
+        whatsappButton.classList.add('show');
+      } else {
+        whatsappButton.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', toggleWhatsAppButton, { passive: true });
+    window.addEventListener('resize', toggleWhatsAppButton);
+    toggleWhatsAppButton();
+
+  </script>
+
+</body>
+</html>

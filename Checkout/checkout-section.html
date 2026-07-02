@@ -1,0 +1,148 @@
+<!--
+  checkout-section.html — Snippet do bloco de checkout multi-país (BR / EU / INTL)
+  
+  Como usar:
+  1. Cole esse trecho na sua sales letter onde o bloco de preço deve aparecer (bloco 16 do mapa visual).
+  2. Inclua o script no <head>:
+     <script src="/shared/checkout/geo-checkout.js" defer></script>
+  3. Substitua os links nos placeholders [TROCAR-URL-CHECKOUT-XX].
+  4. Ajuste preços se necessário (estão configurados pro lançamento do Mãos de Cura).
+  
+  Comportamento:
+  - Ao carregar, mostra "Preparando seu checkout..." (estado loading).
+  - JS detecta país via Cloudflare → ipapi.co → fallback EU.
+  - Brasil → BRL, Europa (36 países) → EUR, qualquer outro → USD.
+-->
+
+<section id="checkout" class="px-6 py-16 lg:px-8">
+  <div class="mx-auto max-w-3xl">
+
+    <div class="text-center mb-10">
+      <h2 class="font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+        Você está a um clique de começar.
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-md">
+
+      <!-- ESTADO 1: LOADING -->
+      <div id="checkout-loading" class="rounded-[2rem] bg-reiki-soft p-8 text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">
+          Preparando seu checkout...
+        </p>
+      </div>
+
+      <!-- ESTADO 2: BRASIL (BRL) -->
+      <div id="checkout-br" class="hidden rounded-[2rem] border border-reiki-primary/20 bg-reiki-soft p-8">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">
+          Para Brasil
+        </p>
+
+        <div class="mt-4">
+          <p class="text-sm text-reiki-text/60 line-through">R$ 47</p>
+          <p class="font-serif text-5xl font-bold text-reiki-text">
+            10x R$ 4,39
+          </p>
+          <p class="mt-1 text-sm text-reiki-text/75">
+            ou R$ 37 à vista
+          </p>
+        </div>
+
+        <a
+          href="http://felizcomreiki.com.br/maos-de-cura-ckbr"
+          class="btn-primary mt-6 block rounded-full px-8 py-4 text-center text-base font-bold"
+        >
+          Começar minha jornada
+        </a>
+
+        <p class="mt-4 text-xs text-reiki-text/60 text-center">
+          Preço de lançamento. O preço sobe pra R$ 47 nas próximas semanas.
+        </p>
+
+        <div class="mt-6 flex items-center justify-center gap-3 text-xs text-reiki-text/60">
+          <span>🔒 Compra segura</span>
+          <span>·</span>
+          <span>Acesso em minutos</span>
+          <span>·</span>
+          <span>Garantia 7 dias</span>
+        </div>
+      </div>
+
+      <!-- ESTADO 3: EUROPA (EUR) -->
+      <div id="checkout-eu" class="hidden rounded-[2rem] border border-reiki-primary/20 bg-reiki-soft p-8">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">
+          Para Europa
+        </p>
+
+        <div class="mt-4">
+          <p class="text-sm text-reiki-text/60 line-through">€ 12</p>
+          <p class="font-serif text-5xl font-bold text-reiki-text">
+            € 9
+          </p>
+          <p class="mt-1 text-sm text-reiki-text/75">
+            pagamento único
+          </p>
+        </div>
+
+        <a
+          href="http://felizcomreiki.com.br/maos-de-cura-ckeu"
+          class="btn-primary mt-6 block rounded-full px-8 py-4 text-center text-base font-bold"
+        >
+          Começar minha jornada
+        </a>
+
+        <p class="mt-4 text-xs text-reiki-text/60 text-center">
+          Preço de lançamento. Sobe nas próximas semanas.
+        </p>
+
+        <div class="mt-6 flex items-center justify-center gap-3 text-xs text-reiki-text/60">
+          <span>🔒 Compra segura</span>
+          <span>·</span>
+          <span>Acesso em minutos</span>
+          <span>·</span>
+          <span>Garantia 7 dias</span>
+        </div>
+      </div>
+
+      <!-- ESTADO 4: INTERNACIONAL (USD) -->
+      <div id="checkout-intl" class="hidden rounded-[2rem] border border-reiki-primary/20 bg-reiki-soft p-8">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">
+          For international visitors
+        </p>
+
+        <div class="mt-4">
+          <p class="text-sm text-reiki-text/60 line-through">$ 12</p>
+          <p class="font-serif text-5xl font-bold text-reiki-text">
+            $ 9
+          </p>
+          <p class="mt-1 text-sm text-reiki-text/75">
+            one-time payment
+          </p>
+        </div>
+
+        <a
+          href="http://felizcomreiki.com.br/maos-de-cura-ckintl"
+          class="btn-primary mt-6 block rounded-full px-8 py-4 text-center text-base font-bold"
+        >
+          Start my journey
+        </a>
+
+        <p class="mt-4 text-xs text-reiki-text/60 text-center">
+          Launch price. Going up in the next few weeks.
+        </p>
+
+        <div class="mt-6 flex items-center justify-center gap-3 text-xs text-reiki-text/60">
+          <span>🔒 Secure payment</span>
+          <span>·</span>
+          <span>Instant access</span>
+          <span>·</span>
+          <span>7-day guarantee</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- No <head> ou antes do </body>, inclua: -->
+<!-- <script src="/shared/checkout/geo-checkout.js" defer></script> -->
