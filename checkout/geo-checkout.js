@@ -70,13 +70,14 @@
     return locationLine.replace('loc=', '').trim().toUpperCase();
   }
 
-  async function getCountryFromIpApi() {
-    const response = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
-    if (!response.ok) throw new Error('ipapi fallback unavailable');
+async function getCountryFromIpApi() {
+  const response = await fetch('/cdn-cgi/trace', { cache: 'no-store' });
+  if (!response.ok) throw new Error('cdn-cgi/trace fallback unavailable');
 
-    const data = await response.json();
-    return data && data.country_code ? data.country_code.toUpperCase() : null;
-  }
+  const text = await response.text();
+  const match = text.match(/loc=([A-Z]{2})/);
+  return match ? match[1].toUpperCase() : null;
+}
 
   // ============================================================
   // SHOW CHECKOUT
