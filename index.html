@@ -22,9 +22,6 @@
   <!-- Preload do asset do hero -->
   <link rel="preload" fetchpriority="high" as="image" href="home.jpg">
 
-  <!-- Microsoft Clarity -->
-  <script src="scripts/clarity.js"></script>
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -279,17 +276,15 @@
         </p>
       </div>
 
-      <!-- Coluna Direita: Imagem home.jpg — usar mesmo padrão de apresentação usado por meditando.avif -->
-      <div class="flex flex-col items-center justify-center overflow-visible" data-aos="fade-left">
-        <div class="rounded-[2rem] overflow-visible shadow-soft border border-reiki-primary/20 w-full">
-          <img
-            src="home.jpg"
-            alt="Mulher em momento de autocuidado e presença, representando a prática Reiki do livro Mãos de Cura"
-            class="w-full h-auto object-contain rounded-[2rem]"
-            loading="eager"
-            fetchpriority="high"
-          >
-        </div>
+      <!-- Coluna Direita: Imagem home.jpg — dominante no mobile, imponente no desktop -->
+      <div class="relative flex items-center justify-center" data-aos="fade-left">
+        <img
+          src="home.jpg"
+          alt="Mulher em momento de autocuidado e presença, representando a prática Reiki do livro Mãos de Cura"
+          class="h-[35vh] sm:h-[40vh] md:h-[500px] lg:h-[580px] w-auto max-w-full object-contain select-none border border-reiki-primary/40 rounded-[2rem]"
+          loading="eager"
+          fetchpriority="high"
+        >
       </div>
 
     </div>
